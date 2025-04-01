@@ -9,7 +9,7 @@ The repository includes comprehensive training scripts for:
 ### Training a New Model
 
 ```python
-from model import IntentClassificationSystem
+from intent_trainer import IntentClassificationSystem
 
 # Initialize the system
 system = IntentClassificationSystem()
@@ -28,7 +28,7 @@ system.save_model(version="my_new_model")
 ### Updating an Existing Model
 
 ```python
-from model_update import AdditionalPatternTrainer
+from intent_fine_tuner import AdditionalPatternTrainer
 
 # Initialize the trainer
 trainer = AdditionalPatternTrainer()
@@ -55,7 +55,7 @@ trainer.save_model(f"updated_model_epoch{best_epoch}_acc{best_accuracy:.2f}")
 
 ### Fine-tuning Options
 
-The `model_update.py` module offers several fine-tuning strategies:
+The `intent_fine_tuner.py` module offers several fine-tuning strategies:
 
 - **freeze_mode='partial'**: Freezes most BERT layers, only fine-tunes the last few layers
 - **freeze_mode='all'**: Freezes all BERT layers, only trains the classifier head
@@ -145,7 +145,7 @@ Note: KoBERT tokenizer and Stanza may require additional resources for Korean la
 ### Basic Usage
 
 ```python
-from IntentClassifier import IntentClassificationSystem
+from intent_inference import IntentClassificationSystem
 
 # Initialize the system
 system = IntentClassificationSystem()
@@ -192,7 +192,7 @@ print(f"Intent: {intent}, Confidence: {max(probs[0]):.4f}")
 The system supports batch prediction using an input file:
 
 ```python
-from IntentClassifier import IntentClassificationSystem
+from intent_inference import IntentClassificationSystem
 
 # Initialize and load model
 system = IntentClassificationSystem()
@@ -261,9 +261,9 @@ The repository consists of the following files:
 
 ```
 .
-├── IntentClassifier.py        # Main inference system implementation
-├── model.py                   # Complete model training pipeline with data augmentation
-├── model_update.py            # Specialized trainer for fine-tuning models
+├── intent_inference.py        # Main inference system implementation
+├── intent_trainer.py          # Complete model training pipeline with data augmentation
+├── intent_fine_tuner.py       # Specialized trainer for fine-tuning models
 ├── example_training_data.csv  # Sample training data
 ├── example_training_data2.csv # Additional training dataset
 ├── input.txt                  # Example inputs for testing
@@ -274,12 +274,12 @@ The repository consists of the following files:
 
 ### Key Files
 
-#### `IntentClassifier.py`
+#### `intent_inference.py` (formerly `IntentClassifier.py`)
 - Contains the main inference system implementation
 - Defines the model architecture and prediction logic
 - Handles model loading and provides APIs for intent classification
 
-#### `model.py`
+#### `intent_trainer.py` (formerly `model.py`)
 - Implements a comprehensive training pipeline
 - Defines `IntentClassifier` class (neural network architecture)
 - Includes `IntentDataset` class for data handling
@@ -293,7 +293,7 @@ The repository consists of the following files:
   - Confusion matrix visualization
   - Data preprocessing pipeline
 
-#### `model_update.py`
+#### `intent_fine_tuner.py` (formerly `model_update.py`)
 - Contains the `AdditionalPatternTrainer` class for fine-tuning existing models
 - Implements strategies for updating models with new patterns
 - Provides partial model freezing capabilities to preserve knowledge
@@ -315,6 +315,18 @@ The repository consists of the following files:
 - The system handles various Korean language patterns and expressions
 - Intent prediction includes confidence scores to filter uncertain classifications
 - The model has been optimized for media-related commands and queries
+
+## License
+
+[Specify the license here]
+
+## Citation
+
+If you use this code or model in your research, please cite:
+
+```
+[Citation information]
+```
 
 ## Acknowledgments
 
