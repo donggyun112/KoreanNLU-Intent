@@ -316,17 +316,6 @@ The repository consists of the following files:
 - Intent prediction includes confidence scores to filter uncertain classifications
 - The model has been optimized for media-related commands and queries
 
-## License
-
-[Specify the license here]
-
-## Citation
-
-If you use this code or model in your research, please cite:
-
-```
-[Citation information]
-```
 
 ## Acknowledgments
 
