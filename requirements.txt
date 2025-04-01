@@ -1,0 +1,14 @@
+huggingface-hub==0.27.0
+kobert-tokenizer @ git+https://github.com/SKTBrain/KoBERT.git@5c46b1c68e4755b54879431bd302db621f4d2f47#subdirectory=kobert_hf
+numpy==2.2.1
+pandas==2.2.3
+protobuf==5.29.2
+regex==2024.11.6
+safetensors==0.4.5
+scikit-learn==1.6.0
+scipy==1.14.1
+sentencepiece==0.2.0
+stanza==1.10.1
+tokenizers==0.21.0
+torch==2.5.1
+transformers==4.47.1
