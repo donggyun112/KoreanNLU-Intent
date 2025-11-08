@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2025-01-03 01:47:58",
+    "epochs": 10,
+    "best_epoch": 5,
+    "best_val_acc": 99.54022988505747,
+    "num_train_samples": 4061
+  },
+  {
+    "timestamp": "2025-01-04 06:52:39",
+    "epochs": 5,
+    "best_epoch": 4,
+    "best_val_acc": 99.6894945661549,
+    "num_train_samples": 27053
+  }
+]
